@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{textcomp, gensymb}
+\begin{document}
+
+\textbf{1.2.4} Find the scalar product of the two vectors defined by $\mathbf{A} = \mathbf{u_x} + \mathbf{u_y} +
+	\mathbf{u_z}$ and $\mathbf{B} = 2\mathbf{u_x} + 4\mathbf{u_y} + 6\mathbf{u_z}$. Determine the angle between these
+two vectors. Check your answer using MATLAB\@.
+
+\vspace{24pt}
+
+The scalar product of two vectors is equal to the sum of the products of their components. It isn't necessary to fully
+expand the product because the cross terms cancel (e.g., $\mathbf{u_x} \cdot \mathbf{u_y} = 0$).
+
+\begin{equation*}
+	\begin{split}
+		\mathbf{A} \bullet \mathbf{B} & = (\mathbf{u_x} + \mathbf{u_y} + \mathbf{u_z})(2\mathbf{u_x} + 4\mathbf{u_y} -
+		6\mathbf{u_z}) \\
+		& = (\mathbf{u_x} \cdot 2\mathbf{u_x}) + (\mathbf{u_y} \cdot 4\mathbf{u_y}) + (\mathbf{u_z} \cdot
+		6\mathbf{u_z}) \\
+		& = 2 + 4 + 6 \\
+		& = 12
+	\end{split}
+\end{equation*}
+
+The scalar product of two vectors is also equal to the product of their magnitudes and the cosine of the angle between
+them. Rearranging for the angle, we have
+
+\begin{equation*}
+	\begin{split}
+		\mathbf{A} \bullet \mathbf{B} & = AB\cos{\theta} \\
+		12 & = ||\mathbf{A}||||\mathbf{B}||\cos{\theta} \\
+		12 & = \sqrt{1^2 + 1^2 + 1^2}\sqrt{2^2 + 4^2 + 6^2}\cos{\theta} \\
+		12 & = 2\sqrt{42}\cos{\theta} \\
+		\frac{12}{2\sqrt{42}} & = \cos{\theta} \\
+		\theta & = \cos^{-1}{\frac{12}{2\sqrt{42}}} \approx 22.2\degree.
+	\end{split}
+\end{equation*}
+
+\end{document}
