@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{textcomp, gensymb}
+\begin{document}
+
+\textbf{1.2.11} Convert the vector $\mathbf{B} = 3\mathbf{u_r} + 4\mathbf{u_\theta} + 5\mathbf{u_\phi}$ that is in
+spherical coordinates into Cartesian coordinates. Check your answer using MATLAB.\@
+
+\begin{equation*}
+	\begin{split}
+		x & = r \sin{\theta} \cos{\phi} \\
+		& = 3 \sin{4} \cos{5} \\
+		& \approx -0.644
+	\end{split}
+\end{equation*}
+
+\begin{equation*}
+	\begin{split}
+		y & = r \sin{\theta} \sin{\phi} \\
+		& = 3 \sin{4} \sin{5} \\
+		& \approx 2.18
+	\end{split}
+\end{equation*}
+
+\begin{equation*}
+	\begin{split}
+		z & = r \cos{\theta} \\
+		& = 3 \cos{4} \\
+		& \approx -1.96
+	\end{split}
+\end{equation*}
+
+The final vector in spherical coordinates is $\mathbf{B} \approx -0.644\mathbf{u_x} + 2.18\mathbf{u_y} -
+	1.96\mathbf{u_z}$.
+
+\end{document}

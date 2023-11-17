@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{textcomp, gensymb}
+\begin{document}
+
+\textbf{1.2.5} Find the projection of a vector from the origin to a point defined at $(1,2,3)$ on the vector from the
+origin to a point defined at $(2,1,6)$. Find the angle between these two vectors. Check your answer using MATLAB.\@
+
+\vspace{24pt}
+
+Let $\mathbf{A} = \begin{pmatrix} 1 & 2 & 3 \end{pmatrix}$ and $\mathbf{B} = \begin{pmatrix} 2 & 1 & 6 \end{pmatrix}$.
+
+The projection of $\mathbf{A}$ onto $\mathbf{B}$ is equal to the scalar product of $\mathbf{A}$ and $\mathbf{\hat{B}}$,
+where $\mathbf{\hat{B}}$ is the unit vector pointing along $\mathbf{B}$.
+
+\begin{equation*}
+	\begin{split}
+		\mathbf{\hat{B}} & = \frac{\mathbf{B}}{||\mathbf{B}||} \\
+		& = \frac{2\mathbf{u_x} + \mathbf{u_y} + 6\mathbf{u_z}}{\sqrt{2^2 + 1^2 + 6^2}} \\
+		& = \frac{2}{\sqrt{41}}\mathbf{u_x} + \frac{1}{\sqrt{41}}\mathbf{u_y} + \frac{6}{\sqrt{41}}\mathbf{u_z}.
+	\end{split}
+\end{equation*}
+
+\begin{equation*}
+	\begin{split}
+		\mathbf{A} \bullet \mathbf{\hat{B}} & = A_x \hat{B}_x + A_y \hat{B}_y + A_z \hat{B}_z \\
+		& = 1 \cdot \frac{2}{\sqrt{41}} + 2 \cdot \frac{1}{\sqrt{41}} + 3 \cdot \frac{6}{\sqrt{41}} \\
+		& = \frac{22}{\sqrt{41}} \\
+		& \approx 3.44
+	\end{split}
+\end{equation*}
+
+The angle between $\mathbf{A}$ and $\mathbf{B}$ may be computed using the definition of the scalar product.
+
+\begin{equation*}
+	\begin{split}
+		\mathbf{A} \bullet \mathbf{B} & = ABcos{\theta} \\
+		A_x B_x + A_y B_y + A_z B_z & = \sqrt{A_x^2 + A_y^2 + A_z^2}\sqrt{B_x^2 + B_y^2 + B_z^2}\cos{\theta} \\
+		\theta & = \arccos{\frac{A_x B_x + A_y B_y + A_z B_z}{\sqrt{A_x^2 + A_y^2 + A_z^2}\sqrt{B_x^2 + B_y^2 + B_z^2}}} \\
+		\theta & = \arccos{\frac{1 \cdot 2 + 2 \cdot 1 + 3 \cdot 6}{\sqrt{1^2 + 2^2 + 3^2}\sqrt{2^2 + 1^2 + 6^2}}} \\
+		\theta & = \arccos{\frac{22}{\sqrt{574}}} \\
+		\theta & \approx 23.3 \degree
+	\end{split}
+\end{equation*}
+
+\end{document}

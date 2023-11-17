@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{textcomp, gensymb}
+\begin{document}
+
+\textbf{1.2.10} Express the vector field $\mathbf{A} = 3\mathbf{u_x} + 4\mathbf{u_y} + 5\mathbf{u_z}$ in spherical
+coordinates. Check your answer using MATLAB.\@
+
+\begin{equation*}
+	\begin{split}
+		r & = \sqrt{x^2 + y^2 + z^2} \\
+		& = \sqrt{3^2 + 4^2 + 5^2} \\
+		& \approx 7.07
+	\end{split}
+\end{equation*}
+
+\begin{equation*}
+	\begin{split}
+		\theta & = \tan^{-1}\left(\frac{\sqrt{x^2 + y^2}}{z}\right) \\
+		& = \tan^{-1}\left(\frac{\sqrt{3^2 + 4^2}}{5}\right) \\
+		& \approx 0.785
+	\end{split}
+\end{equation*}
+
+\begin{equation*}
+	\begin{split}
+		\phi & = \tan^{-1}\left(\frac{y}{x}\right) \\
+		& = \tan^{-1}\left(\frac{4}{3}\right) \\
+		& \approx 0.927
+	\end{split}
+\end{equation*}
+
+The final vector in spherical coordinates is $\mathbf{A} \approx 7.07\mathbf{u_r} + 0.785\mathbf{u_\theta} +
+	0.927\mathbf{u_\phi}$.
+
+\end{document}

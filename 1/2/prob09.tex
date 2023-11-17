@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{textcomp, gensymb}
+\begin{document}
+
+\textbf{1.2.9} Convert the vector $\mathbf{B} = 3\mathbf{u_\rho} + 4\mathbf{u_\phi} + 5\mathbf{u_z}$ that is in
+cylindrical coordinates into Cartesian coordinates. Check your answer using MATLAB.\@
+
+\begin{equation*}
+	\begin{split}
+		x & = \rho \cos{\phi} \\
+		& = 3 \cos{4} \\
+		& = -1.96
+	\end{split}
+\end{equation*}
+
+\begin{equation*}
+	\begin{split}
+		y & = \rho \sin{\phi} \\
+		& = 3 \sin{4} \\
+		& = -2.27
+	\end{split}
+\end{equation*}
+
+The values of $z$ are the same in both coordinate systems. Therefore, the final vector in cylindrical coordinates is
+$\mathbf{B} \approx -1.96\mathbf{u_\rho} - 2.27\mathbf{u_\phi} + 5\mathbf{u_z}$.
+
+\end{document}

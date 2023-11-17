@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\begin{document}
+
+\textbf{1.2.12} For the vectors $\mathbf{A} = \mathbf{u_x} + \mathbf{u_y} + \mathbf{u_z}$, $\mathbf{B} = 2\mathbf{u_x} +
+	2\mathbf{u_y} + 2\mathbf{u_z}$, and $\mathbf{C} = 3\mathbf{u_x} + 3\mathbf{u_y} + 3\mathbf{u_z}$, show that $\mathbf{A}
+	\times (\mathbf{B} \times \mathbf{C}) = \mathbf{B} (\mathbf{A} \bullet \mathbf{C}) - \mathbf{C} (\mathbf{A} \bullet
+	\mathbf{B})$. Check your answer using MATLAB.\@
+
+\vspace{24pt}
+
+We will compute each side independently and then show that they are equal.
+
+\begin{equation*}
+	\begin{split}
+		\mathbf{A} \times (\mathbf{B} \times \mathbf{C}) & = \mathbf{A} \times ((B_y C_z - B_z C_y)\mathbf{u_x} \\
+		& \quad + (B_z C_x - B_x C_z)\mathbf{u_y} \\
+		& \quad + (B_x C_y - B_y C_x)\mathbf{u_z}) \\
+		& = \mathbf{A} \times \left( (2 \cdot 3 - 2 \cdot 3)\mathbf{u_x} + (2 \cdot 3 - 2 \cdot 3)\mathbf{u_y} + (2 \cdot 3 - 2 \cdot 3)\mathbf{u_z} \right) \\
+		& = \mathbf{A} \times (0\mathbf{u_x} + 0\mathbf{u_y} + 0\mathbf{u_z}) \\
+		& = (A_y \cdot 0 - A_z \cdot 0)\mathbf{u_x} + (A_z \cdot 0 - A_x \cdot 0)\mathbf{u_y} + (A_x \cdot 0 - A_y \cdot 0)\mathbf{u_z} \\
+		& = 0\mathbf{u_x} + 0\mathbf{u_y} + 0\mathbf{u_z}
+	\end{split}
+\end{equation*}
+
+\begin{equation*}
+	\begin{split}
+		\mathbf{B} (\mathbf{A} \bullet \mathbf{C}) - \mathbf{C} (\mathbf{A} \bullet \mathbf{B}) & = \mathbf{B} ((A_x \cdot C_x) + (A_y \cdot C_y) + (A_z \cdot C_z)) \\
+		& \quad - \mathbf{C} ((A_x \cdot B_x) + (A_y \cdot B_y) + (A_z \cdot B_z)) \\
+		& = \mathbf{B} ((1 \cdot 3) + (1 \cdot 3) + (1 \cdot 3)) \\
+		& \quad - \mathbf{C} ((1 \cdot 2) + (1 \cdot 2) + (1 \cdot 2)) \\
+		& = 9 \mathbf{B} - 6 \mathbf{C} \\
+		& = (18 - 18)\mathbf{u_x} + (18 - 18)\mathbf{u_y} + (18 - 18)\mathbf{u_z} \\
+		& = 0\mathbf{u_x} + 0\mathbf{u_y} + 0\mathbf{u_z}
+	\end{split}
+\end{equation*}
+
+Both sides are equal to the zero vector $\therefore \mathbf{A} \times (\mathbf{B} \times \mathbf{C}) = \mathbf{B}
+	(\mathbf{A} \bullet \mathbf{C}) - \mathbf{C} (\mathbf{A} \bullet \mathbf{B})$.
+
+\end{document}

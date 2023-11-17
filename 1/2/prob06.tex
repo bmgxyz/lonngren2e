@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{textcomp, gensymb}
+\begin{document}
+
+\textbf{1.2.6} Find the vector product of the two vectors defined by $\mathbf{A} = 3\mathbf{u_x} + 4\mathbf{u_y} +
+	5\mathbf{u_z}$ and $\mathbf{B} = -5\mathbf{u_x} + 4\mathbf{u_y} - 3\mathbf{u_z}$. Check your answer using MATLAB.\@
+
+\vspace{24pt}
+
+The vector product of $\mathbf{A}$ and $\mathbf{B}$ is
+
+\begin{equation*}
+	\begin{split}
+		\mathbf{A} \times \mathbf{B} & = (A_y B_z - A_z B_y)\mathbf{u_x} + (A_z B_x - A_x B_z)\mathbf{u_y} + (A_x B_y - A_y B_x)\mathbf{u_z} \\
+		& = (4 \cdot -3 - 5 \cdot 4)\mathbf{u_x} + (5 \cdot -5 - 3 \cdot -3)\mathbf{u_y} + (3 \cdot 4 - 4 \cdot -5)\mathbf{u_z} \\
+		& = -32\mathbf{u_x} - 16\mathbf{u_y} + 32\mathbf{u_z}.
+	\end{split}
+\end{equation*}
+
+\end{document}
