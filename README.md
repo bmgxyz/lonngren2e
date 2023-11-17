@@ -1,0 +1,68 @@
+Solutions to the problems in *Fundamentals of Electromagnetics with MATLAB*, 2nd ed., by Lonngren, Savov, and Jost (ISBN
+1-891121-58-8). I have organized the solutions by chapter and section. All solutions have a MATLAB file, a LaTeX file,
+or both. I have included the text of the problem with each solution file. Note that I completed the MATLAB problems with
+GNU Octave, so I'm not certain that they will work flawlessly with MATLAB.
+
+- [ ] 1 — MATLAB, Vectors, and Phasors
+  - [x] 1.1 — Understanding Vectors Using MATLAB
+  - [ ] 1.2 — Coordinate Systems
+  - [ ] 1.3 — Integral Relations for Vectors
+  - [ ] 1.4 — Differential Relations for Vectors
+  - [ ] 1.5 — Phasors
+- [ ] 2 — Electrostatic Fields
+  - [ ] 2.1 — Coulomb's Law
+  - [ ] 2.2 — Electric Field
+  - [ ] 2.3 — Superposition Principles
+  - [ ] 2.4 — Gauss's Law
+  - [ ] 2.5 — Potential Energy and Electric Potential
+  - [ ] 2.6 — Numerical Integration
+  - [ ] 2.7 — Dielectric Materials
+  - [ ] 2.8 — Capacitance
+- [ ] 3 — Magnetostatic Fields
+  - [ ] 3.1 — Electrical Currents
+  - [ ] 3.2 — Fundamentals of Magnetic Fields
+  - [ ] 3.3 — Magnetic Vector Potential and the Biot-Savart Law
+  - [ ] 3.4 — Magnetic Forces
+  - [ ] 3.5 — Magnetic Materials
+  - [ ] 3.6 — Magnetic Circuits
+  - [ ] 3.7 — Inductance
+- [ ] 4 — Boundary Value Problems Using MATLAB
+  - [ ] 4.1 — Boundary Conditions for Electric and Magnetic Fields
+  - [ ] 4.2 — Poisson's and Laplace's Equations
+  - [ ] 4.3 — Analytical Solution in One Dimension—Direct Integration Method
+  - [ ] 4.4 — Numerical Solution of a One-Dimensional Equation—Finite Difference Method
+  - [ ] 4.5 — Analytical Solution of a Two-Dimensional Equation—Separation of variables
+  - [ ] 4.6 — Finite Difference Method Using MATLAB
+  - [ ] 4.7 — Finite Element Method Using MATLAB
+  - [ ] 4.8 — Method of Moments Using MATLAB
+- [ ] 5 — Time-Varying Electromagnetic Fields
+  - [ ] 5.1 — Faraday's Law of Induction
+  - [ ] 5.2 — Equation of Continuity
+  - [ ] 5.3 — Displacement Current
+  - [ ] 5.4 — Maxwell's Equations
+  - [ ] 5.5 — Poynting's Theorem
+  - [ ] 5.6 — Time-Harmonic Electromagnetic Fields
+- [ ] 6 — Electromagnetic Wave Propagation
+  - [ ] 6.1 — Wave Equation
+  - [ ] 6.2 — One-Dimensional Wave Equation
+  - [ ] 6.3 — Time-Harmonic Plane Waves
+  - [ ] 6.4 — Plane Wave Propagation in a Dielectric Medium
+  - [ ] 6.5 — Reflection and Transmission of an Electromagnetic Wave
+- [ ] 7 — Transmission Lines
+  - [ ] 7.1 — Equivalent Electrical Circuits
+  - [ ] 7.2 — Transmission Line Equations
+  - [ ] 7.3 — Sinusoidal Waves
+  - [ ] 7.4 — Terminations
+  - [ ] 7.5 — Impedance on the Transmission Line Matching
+  - [ ] 7.6 — Smith Chart
+  - [ ] 7.7 — Transient Effects and the Bounce Diagram
+  - [ ] 7.8 — Pulse Propagation
+  - [ ] 7.9 — Lossy Transmission Lines
+  - [ ] 7.10 — Dispersion and Group Velocity
+- [ ] 8 — Radiation of Electromagnetic Waves
+  - [ ] 8.1 — Radiation Fundamentals
+  - [ ] 8.2 — Infinitesimal Electric Dipole Antenna
+  - [ ] 8.3 — Finite Electric Dipole Antenna
+  - [ ] 8.4 — Loop Antennas
+  - [ ] 8.5 — Antenna Parameters
+  - [ ] 8.6 — Antenna Arrays
