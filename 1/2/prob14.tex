@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\begin{document}
+
+\textbf{1.2.14} Find the area of the parallelogram using vector notation. Compare your result with that found
+graphically.\@ \textit{Note: Diagram not shown.}
+
+\vspace{24pt}
+
+The magnitude of the vector product of two vectors is equal to the area of the parallelogram formed by those vectors.
+Let the two vectors $\mathbf{A} = \begin{pmatrix} 2 & 4 & 0 \end{pmatrix}$ and $\mathbf{B} = \begin{pmatrix} 6 & 0 & 0
+	\end{pmatrix}$ be the two adjacent sides of the parallelogram that start at the origin. Note that both vectors have a
+$\mathbf{u_z}$ component that is equal to zero because the vector product is defined in three dimensions, and
+$\mathbf{A}$ and $\mathbf{B}$ lie in the $xy$ plane.
+
+\begin{equation*}
+	\begin{split}
+		||\mathbf{A} \times \mathbf{B}|| & = ||(2\mathbf{u_x} + 4\mathbf{u_y} + 0\mathbf{u_z}) \times (6\mathbf{u_x} + 0\mathbf{u_y} + 0\mathbf{u_z})|| \\
+		& = ||0\mathbf{u_x} + 0\mathbf{u_y} - 24\mathbf{u_z}|| \\
+		& = \sqrt{0^2 + 0^2 + {(-24)}^2} \\
+		& = 24
+	\end{split}
+\end{equation*}
+
+This value matches the result obtained when counting the area graphically. The parallelogram may be split into a central
+square with side length $4$ and two triangles that together form a rectangle of $2$ by $4$ units. This gives an area of
+$4 \cdot 4 + 2 \cdot 4 = 24$.
+
+\end{document}
