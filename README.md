@@ -5,7 +5,7 @@ GNU Octave, so I'm not certain that they will work flawlessly with MATLAB.
 
 - [ ] 1 — MATLAB, Vectors, and Phasors
   - [x] 1.1 — Understanding Vectors Using MATLAB
-  - [ ] 1.2 — Coordinate Systems
+  - [x] 1.2 — Coordinate Systems
   - [ ] 1.3 — Integral Relations for Vectors
   - [ ] 1.4 — Differential Relations for Vectors
   - [ ] 1.5 — Phasors
