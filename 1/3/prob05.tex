@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\begin{document}
+
+\textbf{1.3.5} Calculate the closed-surface integral $\oint \mathbf{A} \bullet \mathbf{ds}$ if $\mathbf{A =
+		x\mathbf{u_x} + y\mathbf{u_y}}$ and the surface is that of a cube. Apply the divergence theorem to solve the same
+integral.\@ \textit{Note: Diagram not shown.}
+
+\vspace{24pt}
+
+The cube has side length $2$, and one of its corners is at the origin.
+
+\begin{equation*}
+	\begin{split}
+		\oint \mathbf{A} \bullet \mathbf{ds} & = \int_{y=0}^2 \int_{x=0}^2 (x\mathbf{u_x} + y\mathbf{u_y}) \bullet (\text{d}x\text{d}y\mathbf{u_x}) \\
+		& \quad + \int_{y=0}^2 \int_{x=0}^2 (x\mathbf{u_x} + y\mathbf{u_y}) \bullet (\text{d}x\text{d}y(-\mathbf{u_x})) \\
+		& \quad + \int_{z=0}^2 \int_{x=0}^2 (x\mathbf{u_x} + y\mathbf{u_y}) \bullet (\text{d}x\text{d}z\mathbf{u_y}) \\
+		& \quad + \int_{z=0}^2 \int_{x=0}^2 (x\mathbf{u_x} + y\mathbf{u_y}) \bullet (\text{d}x\text{d}z(-\mathbf{u_y})) \\
+		& \quad + \int_{z=0}^2 \int_{y=0}^2 (x\mathbf{u_x} + y\mathbf{u_y}) \bullet (\text{d}y\text{d}z\mathbf{u_y}) \\
+		& \quad + \int_{z=0}^2 \int_{y=0}^2 (x\mathbf{u_x} + y\mathbf{u_y}) \bullet (\text{d}y\text{d}z(-\mathbf{u_y})) \\
+		& = \int_{z=0}^2 \int_{x=0}^2 2\text{d}x\text{d}z + \int_{z=0}^2 \int_{y=0}^2 2\text{d}y\text{d}z \\
+		& = \int_{z=0}^2 2x\rvert_{x=0}^2\text{d}z + \int_{z=0}^2 2y\rvert_{y=0}^2\text{d}z \\
+		& = \int_{z=0}^2 4\text{d}z + \int_{z=0}^2 4\text{d}z \\
+		& = 4z\rvert_{z=0}^2 + 4z\rvert_{z=0}^2 \\
+		& = 8 + 8 \\
+		& = 16
+	\end{split}
+\end{equation*}
+
+\newpage
+
+We can apply the divergence theorem to solve the above integral in a different way.
+
+\begin{equation*}
+	\begin{split}
+		\oint \mathbf{A} \bullet \mathbf{ds} & = \int_{\Delta v} (\nabla \bullet \mathbf{A}) \text{d}v \\
+		\int_{\Delta v} (\nabla \bullet \mathbf{A}) \text{d}v & = \int_{\Delta v} \left( \frac{\partial A_x}{\partial x} + \frac{\partial A_y}{\partial y} \right) \text{d}v \\
+		& = \int_{\Delta v} (1 + 1)\text{d}v \\
+		& = \int_{z=0}^2 \int_{y=0}^2 \int_{x=0}^2 2 \text{d}x \text{d}y \text{d}z \\
+		& = \int_{z=0}^2 \int_{y=0}^2 2x\rvert_{x=0}^2 \text{d}y \text{d}z \\
+		& = \int_{z=0}^2 \int_{y=0}^2 4 \text{d}y \text{d}z \\
+		& = \int_{z=0}^2 4y\rvert_{y=0}^2 \text{d}z \\
+		& = \int_{z=0}^2 8 \text{d}z \\
+		& = 8z\rvert_{z=0}^2 \\
+		& = 16
+	\end{split}
+\end{equation*}
+
+\end{document}

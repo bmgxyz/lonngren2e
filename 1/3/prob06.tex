@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\begin{document}
+
+\textbf{1.3.6} Evaluate the closed-surface integral of the vector $\mathbf{A} = xyz\mathbf{u_x} + xyz\mathbf{u_y} +
+	xyz\mathbf{u_z}$ over the cubical surface shown in Problem 1.3.5.\@ \textit{Note: Diagram not shown.}
+
+\vspace{24pt}
+
+The cube has side length $2$, and one of its corners is at the origin.
+
+\begin{equation*}
+	\begin{split}
+		\oint \mathbf{A} \bullet \mathbf{ds} & = \int_{z=0}^2 \int_{y=0}^2 (xyz\mathbf{u_x} + xyz\mathbf{u_y} + xyz\mathbf{u_z}) \bullet (\text{d}y\text{d}z\mathbf{u_x}) \\
+		& \quad + \int_{z=0}^2 \int_{y=0}^2 (xyz\mathbf{u_x} + xyz\mathbf{u_y} + xyz\mathbf{u_z}) \bullet (\text{d}y\text{d}z(-\mathbf{u_x})) \\
+		& \quad + \int_{z=0}^2 \int_{x=0}^2 (xyz\mathbf{u_x} + xyz\mathbf{u_y} + xyz\mathbf{u_z}) \bullet (\text{d}x\text{d}z\mathbf{u_y}) \\
+		& \quad + \int_{z=0}^2 \int_{x=0}^2 (xyz\mathbf{u_x} + xyz\mathbf{u_y} + xyz\mathbf{u_z}) \bullet (\text{d}x\text{d}z(-\mathbf{u_y})) \\
+		& \quad + \int_{y=0}^2 \int_{x=0}^2 (xyz\mathbf{u_x} + xyz\mathbf{u_y} + xyz\mathbf{u_z}) \bullet (\text{d}x\text{d}y\mathbf{u_z}) \\
+		& \quad + \int_{y=0}^2 \int_{x=0}^2 (xyz\mathbf{u_x} + xyz\mathbf{u_y} + xyz\mathbf{u_z}) \bullet (\text{d}x\text{d}y(-\mathbf{u_z})) \\
+		& = \int_{z=0}^2 \int_{y=0}^2 xyz \text{d}y\text{d}z - \int_{z=0}^2 \int_{y=0}^2 xyz \text{d}y\text{d}z \\
+		& \quad + \int_{z=0}^2 \int_{x=0}^2 xyz \text{d}x\text{d}z - \int_{z=0}^2 \int_{x=0}^2 xyz \text{d}x\text{d}z \\
+		& \quad + \int_{y=0}^2 \int_{x=0}^2 xyz \text{d}x\text{d}y - \int_{y=0}^2 \int_{x=0}^2 xyz \text{d}x\text{d}y \\
+		& = 0
+	\end{split}
+\end{equation*}
+
+\end{document}

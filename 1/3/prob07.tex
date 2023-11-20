@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\begin{document}
+
+\textbf{1.3.7} Evaluate the closed-surface integral of the vector $\mathbf{A} = 3\mathbf{u_r}$ over the spherical
+surface that has a radius $a$.
+
+\begin{equation*}
+	\begin{split}
+		\oint \mathbf{A} \bullet \mathbf{ds} & = \int_{\phi = 0}^{2\pi} \int_{\theta = 0}^\pi 3\mathbf{u_r} \bullet r^2 \sin{\theta} \text{d}\theta \text{d}\phi\mathbf{u_r} \\
+		& = \int_{\phi = 0}^{2\pi} \int_{\theta = 0}^\pi 3r^2 \sin{\theta} \text{d}\theta \text{d}\phi \\
+		& = -\int_{\phi = 0}^{2\pi} 3r^2 \cos{\theta} \big\rvert_{\theta=0}^\pi \text{d}\phi \\
+		& = -\int_{\phi = 0}^{2\pi} 3r^2 (-1 - 1) \text{d}\phi \\
+		& = \int_{\phi = 0}^{2\pi} 6r^2 \text{d}\phi \\
+		& = 6r^2\phi\big\rvert_{\phi=0}^{2\pi} \\
+		& = 12 \pi r^2 \\
+		& = 12 \pi a^2
+	\end{split}
+\end{equation*}
+
+\end{document}
