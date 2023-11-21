@@ -12,17 +12,20 @@
 
 \vspace{24pt}
 
-The radius of the cylinder is $a$.
+The radius of the cylinder is $a$. In the following steps, the first surface integral covers the wall of the cylinder,
+and the second covers the top and bottom. The top and bottom are identical, so the integral is doubled.
 
 \begin{equation*}
 	\begin{split}
 		\oint \mathbf{A} \bullet \mathbf{ds} & = \int_{\phi=0}^{2\pi} \int_{z=0}^\mathscr{L} (\mathbf{u_\rho} + 2\mathbf{u_z}) \bullet (\rho \text{d}\phi \text{d}z \mathbf{u_\rho} + \rho \text{d}\rho \text{d}\phi \mathbf{u_z}) \\
+		& \quad + 2 \int_{\phi=0}^{2\pi} \int_{\rho=0}^a (\mathbf{u_\rho} + 2\mathbf{u_z}) \bullet (\rho \text{d}\phi \text{d}z \mathbf{u_\rho} + \rho \text{d}\rho \text{d}\phi \mathbf{u_z}) \\
 		& = \int_{\phi=0}^{2\pi} \int_{z=0}^\mathscr{L} \rho \text{d}z \text{d}\phi + \int_{\phi=0}^{2\pi} \int_{z=0}^\mathscr{L} 2\rho \text{d}\rho \text{d}\phi \\
-		& = \int_{\phi=0}^{2\pi} \rho z \rvert_{z=0}^\mathscr{L} \text{d}\phi \\
-		& = \int_{\phi=0}^{2\pi} \rho \mathscr{L} \text{d}\phi \\
-		& = \rho \mathscr{L} \phi \rvert_{\phi=0}^{2\pi} \\
-		& = 2 \pi \rho \mathscr{L} \\
-		& = 2 \pi a \mathscr{L}
+		& \quad + 2 \int_{\phi=0}^{2\pi} \int_{\rho=0}^a \rho \text{d}\phi \text{d}z + 2 \int_{\phi=0}^{2\pi} \int_{\rho=0}^a 2 \rho \text{d}\rho \text{d}\phi \\
+		& = \int_{\phi=0}^{2\pi} \rho z \bigg\rvert_{z=0}^\mathscr{L} \text{d}\phi + 2 \int_{\phi=0}^{2\pi} \frac{2\rho^2}{2}\bigg\rvert_{\rho=0}^a \text{d}\phi \\
+		& = \int_{\phi=0}^{2\pi} \rho \mathscr{L} \text{d}\phi + 2 \int_{\phi=0}^{2\pi} \frac{2a^2}{2} \text{d}\phi \\
+		& = \rho \mathscr{L} \phi \big\rvert_{\phi=0}^{2\pi} + 2 \phi a^2 \big\rvert_{\phi=0}^{2\pi} \\
+		& = 2 \pi \rho \mathscr{L} + 4 \pi a^2 \\
+		& = 2 \pi (a \mathscr{L} + 2 a^2)
 	\end{split}
 \end{equation*}
 
