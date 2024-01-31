@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{geometry}
+\usepackage{mathrsfs}
+\begin{document}
+
+\textbf{1.4.12} In rectangular coordinates, verify that $\nabla \times \nabla a = \mathbf{0}$ where $a = 3x^2y + 4z^2x$
+by carrying out the detailed differentiations.
+
+\begin{equation*}
+	\begin{split}
+		\nabla \times \nabla a & = \nabla \times \left(
+		\frac{\partial a}{\partial x} \mathbf{u_x}
+		+ \frac{\partial a}{\partial y} \mathbf{u_y}
+		+ \frac{\partial a}{\partial z} \mathbf{u_z}
+		\right) \\
+		& = \left(\frac{\partial}{\partial y} \frac{\partial a}{\partial z} - \frac{\partial}{\partial z} \frac{\partial a}{\partial y}\right)\mathbf{u_x}
+		+ \left(\frac{\partial}{\partial z} \frac{\partial a}{\partial x} - \frac{\partial}{\partial x} \frac{\partial a}{\partial z}\right)\mathbf{u_y}
+		+ \left(\frac{\partial}{\partial x} \frac{\partial a}{\partial y} - \frac{\partial}{\partial y} \frac{\partial a}{\partial x}\right)\mathbf{u_z} \\
+		& = \left(\frac{\partial}{\partial y} \frac{\partial}{\partial z}(3x^2y + 4z^2x) - \frac{\partial}{\partial z} \frac{\partial}{\partial y}(3x^2y + 4z^2x)\right)\mathbf{u_x} \\
+		& \quad + \left(\frac{\partial}{\partial z} \frac{\partial}{\partial x}(3x^2y + 4z^2x) - \frac{\partial}{\partial x} \frac{\partial}{\partial z}(3x^2y + 4z^2x)\right)\mathbf{u_y} \\
+		& \quad + \left(\frac{\partial}{\partial x} \frac{\partial}{\partial y}(3x^2y + 4z^2x) - \frac{\partial}{\partial y} \frac{\partial}{\partial x}(3x^2y + 4z^2x)\right)\mathbf{u_z} \\
+		& = 0\mathbf{u_x} + (8z-8z)\mathbf{u_y} + (6x-6x)\mathbf{u_z} \\
+		& = \mathbf{0}
+	\end{split}
+\end{equation*}
+
+\end{document}

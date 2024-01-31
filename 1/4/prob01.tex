@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{mathrsfs}
+\begin{document}
+
+\textbf{1.4.1} A hill can be modeled with the equation $H = 10 - x^2 - 3y^2$ where $H$ is the elevation of the hill.
+Find the path that a frictionless ball would take to experience the greatest change of elevation in the least change of
+horizontal position. Assume that the motion of the ball is unconstrained.
+
+\vspace{24pt}
+
+The path that the ball would take is equivalent to the gradient of $H$.
+
+\begin{equation*}
+	\begin{split}
+		\nabla H & = \frac{\partial H}{\partial x}\mathbf{u_x} + \frac{\partial H}{\partial y}\mathbf{u_y} \\
+		& = \frac{\partial}{\partial x}(10 - x^2 - 3y^2)\mathbf{u_x} + \frac{\partial}{\partial y}(10 - x^2 - 3y^2)\mathbf{u_y} \\
+		& = -2x\mathbf{u_x} - 6y\mathbf{u_y}
+	\end{split}
+\end{equation*}
+
+\end{document}

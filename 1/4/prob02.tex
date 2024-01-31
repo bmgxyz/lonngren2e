@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{mathrsfs}
+\begin{document}
+
+\textbf{1.4.2} Find the gradient of the function $H = x^2 yz$ and also the directional derivative of $H$ specified by
+the unit vector $\mathbf{u} = a(\mathbf{u_x} + \mathbf{u_y} + \mathbf{u_z})$ where $a$ is a constant at the point
+(1,2,3). State the value for the constant $a$.
+
+\begin{equation*}
+	\begin{split}
+		\nabla H & = \frac{\partial H}{\partial x}\mathbf{u_x} + \frac{\partial H}{\partial y}\mathbf{u_y} + \frac{\partial H}{\partial z}\mathbf{u_z} \\
+		& = \frac{\partial}{\partial x}(x^2 yz)\mathbf{u_x} + \frac{\partial}{\partial y}(x^2 yz)\mathbf{u_y} + \frac{\partial}{\partial z}(x^2 yz)\mathbf{u_z} \\
+		& = 2xyz\mathbf{u_x} + x^2 z\mathbf{u_y} + x^2 y\mathbf{u_z}
+	\end{split}
+\end{equation*}
+
+Let $p = \begin{pmatrix} 1 & 2 & 3 \end{pmatrix}$. The directional derivative of $H$ at $p$ along $\mathbf{u}$ is given
+by
+
+\begin{equation*}
+	\begin{split}
+		\nabla H(p) \bullet \mathbf{u} & = (2xyz\mathbf{u_x} + x^2 z\mathbf{u_y} + x^2 y\mathbf{u_z})\rvert_{p} \bullet a(\mathbf{u_x} + \mathbf{u_y} + \mathbf{u_z}) \\
+		& = (2axyz + ax^2 z + ax^2 y)\rvert_{p} \\
+		& = 2a \cdot 1 \cdot 2 \cdot 3 + a \cdot 1^2 \cdot 3 + a \cdot 1^2 \cdot 2 \\
+		& = 12a + 3a + 2a \\
+		& = 17a
+	\end{split}
+\end{equation*}
+
+The unit vector $\mathbf{u}$ has length $1$ by definition, and we can use that to compute the value of $a$.
+
+\begin{equation*}
+	\begin{split}
+		||\mathbf{u}|| & = 1 \\
+		\sqrt{a^2 + a^2 + a^2} & = 1 \\
+		\sqrt{3a^2} & = 1 \\
+		3a^2 & = 1 \\
+		a^2 & = \frac{1}{3} \\
+		a & = \frac{\sqrt{3}}{3}
+	\end{split}
+\end{equation*}
+
+Therefore, $\nabla H(p) \bullet \mathbf{u} = \frac{17\sqrt{3}}{3} \approx 9.81$.
+
+\end{document}

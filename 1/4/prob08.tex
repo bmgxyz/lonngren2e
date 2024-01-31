@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{mathrsfs}
+\begin{document}
+
+\textbf{1.4.8} Evaluate the line integral of the vector function $\mathbf{A} = x\mathbf{u_x} + x^2\mathbf{u_y} +
+	xyz\mathbf{u_z}$ around the square contour $C$. Integrate $\nabla \times \mathbf{A}$ over the surface bounded by $C$.
+Show that this example satisfies Stokes's theorem. \@\textit{Note: Diagram not shown.}
+
+\vspace{24pt}
+
+Let the four corners of the square contour $C$ be
+
+\begin{equation*}
+	a = (0,0), b = (1,0), c = (1,1), d = (0,1)
+\end{equation*}
+
+\begin{equation*}
+	\begin{split}
+		\oint\mathbf{A} \bullet \mathbf{dl} & = \int_a^b (x\mathbf{u_x} + x^2\mathbf{u_y} + xyz\mathbf{u_z}) \bullet \text{dx} \mathbf{u_x} \\
+		& \quad + \int_b^c (x\mathbf{u_x} + x^2\mathbf{u_y} + xyz\mathbf{u_z}) \bullet \text{dy} \mathbf{u_y} \\
+		& \quad + \int_c^d (x\mathbf{u_x} + x^2\mathbf{u_y} + xyz\mathbf{u_z}) \bullet \text{dx} \mathbf{u_x} \\
+		& \quad + \int_d^a (x\mathbf{u_x} + x^2\mathbf{u_y} + xyz\mathbf{u_z}) \bullet \text{dy} \mathbf{u_y} \\
+		& = \int_{x=0}^1 x \text{dx} + \int_{y=0}^1 x^2 \rvert_{x=1} \text{dy} + \int_{x=1}^0 x \text{dx} + \int_{y=1}^0 x^2 \rvert_{x=0} \text{dy} \\
+		& = \frac{x^2}{2} \bigg\rvert_0^1 + y \bigg\rvert_0^1 - \frac{x^2}{2} \bigg\rvert_0^1 - 0 \\
+		& = 1
+	\end{split}
+\end{equation*}
+
+Stokes's theorem states that the loop integral of a field is equal to the curl of the field on the surface enclosed by
+the loop. We can show that this theorem holds in this case by evaluating the appropriate surface integral and comparing
+the result to the loop integral above.
+
+\begin{equation*}
+	\begin{split}
+		\int_{\Delta \mathbf{s}} (\nabla \times \mathbf{A}) \bullet \mathbf{ds} & = \int_{\Delta \mathbf{s}} \left[
+			\left(\frac{\partial A_z}{\partial y} - \frac{\partial A_y}{\partial z}\right) \mathbf{u_x}
+			+ \left(\frac{\partial A_x}{\partial z} - \frac{\partial A_z}{\partial x}\right) \mathbf{u_y}
+			+ \left(\frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y}\right) \mathbf{u_z}
+			\right] \bullet (\text{dydx}\mathbf{u_z}) \\
+		& = \int_{x=0}^1 \int_{y=0}^1 \left[\frac{\partial}{\partial x}(x^2) - \frac{\partial}{\partial y}(x)\right]\text{dydx} \\
+		& = \int_{x=0}^1 \int_{y=0}^1 2x \text{dydx} \\
+		& = \int_{x=0}^1 2xy \rvert_{y=0}^1 \text{dx} \\
+		& = \int_{x=0}^1 2x \text{dx} \\
+		& = x^2 \rvert_{x=0}^1 \\
+		& = 1
+	\end{split}
+\end{equation*}
+
+The two sides of Stokes's theorem give the same value. Therefore, the theorem is valid in this case.
+
+\end{document}

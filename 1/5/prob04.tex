@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{mathrsfs}
+\begin{document}
+
+\textbf{1.5.4} Find and plot the current $i(t)$ in the circuit if $v(t) = 10\cos{(120\pi t)}$.\@ \textit{Note: Diagram
+	not shown.}
+
+\vspace{24pt}
+
+First, we write the impedance around the loop.
+
+\begin{equation*}
+	\begin{split}
+		Z & = R + j\omega L + \frac{1}{j\omega C} \\
+		& = 10 + j120\pi \cdot 0.1 + \frac{1}{j120\pi \cdot 0.001} \\
+		& = 10 + j12\pi - j\frac{1}{0.12\pi} \\
+		& = 10 + j\left(12\pi - \frac{1}{0.12\pi}\right)
+	\end{split}
+\end{equation*}
+
+Now we can use Ohm's law to find the current around the loop.
+
+\begin{equation*}
+	\begin{split}
+		I(\chi) & = \frac{V(\chi)}{Z} \\
+		& = \frac{10e^{j0}}{10 + j(12\pi - \frac{1}{0.12\pi})} \\
+		& \approx 0.0753 - j0.264
+	\end{split}
+\end{equation*}
+
+\begin{equation*}
+	\begin{split}
+		i(t) & = \sqrt{{(0.0753)}^2 + {(-0.264)}^2}\cos{\left(120\pi t + \tan^{-1}\left(\frac{-0.264}{0.0753}\right)\right)} \\
+		& = 0.275\cos(120\pi t - 1.293) \\
+		& = 0.275\cos(120\pi t - 74\degree) \text{A}
+	\end{split}
+\end{equation*}
+
+\end{document}

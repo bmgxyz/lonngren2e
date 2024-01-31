@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{mathrsfs}
+\begin{document}
+
+\textbf{1.4.9} Show that $\nabla \times \mathbf{A} = 0$ if $\mathbf{A} = \frac{1}{\rho}\mathbf{u_\rho}$ in cylindrical
+coordinates.
+
+\begin{equation*}
+	\begin{split}
+		\nabla \times \mathbf{A} & = \left(\frac{1}{\rho}\frac{\partial A_z}{\partial \phi} - \frac{\partial A_\phi}{\partial z}\right) \mathbf{u_\rho} \\
+		& \quad + \left(\frac{\partial A_\rho}{\partial z} - \frac{\partial A_z}{\partial \rho}\right) \mathbf{u_\phi} \\
+		& \quad + \frac{1}{\rho}\left(\frac{\partial (\rho A_\phi)}{\partial \rho} - \frac{\partial A_\rho}{\partial \phi}\right) \mathbf{u_z} \\
+		& = \left(\frac{1}{\rho}\frac{\partial}{\partial \phi}(0) - \frac{\partial}{\partial z}(0)\right) \mathbf{u_\rho} \\
+		& \quad + \left(\frac{\partial}{\partial z}\left(\frac{1}{\rho}\right) - \frac{\partial}{\partial \rho}(0)\right) \mathbf{u_\phi} \\
+		& \quad + \frac{1}{\rho}\left(\frac{\partial}{\partial \rho}(\rho \cdot 0) - \frac{\partial}{\partial \phi}(0)\right) \mathbf{u_z} \\
+		& = 0
+	\end{split}
+\end{equation*}
+
+\end{document}

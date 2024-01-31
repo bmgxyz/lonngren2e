@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{geometry}
+\usepackage{mathrsfs}
+\begin{document}
+
+\textbf{1.4.13} In rectangular coordinates, verify that $\nabla \times (a\mathbf{A}) = (\nabla a) \times \mathbf{A} +
+	a\nabla \times \mathbf{A}$ where $\mathbf{A} = xyz[\mathbf{u_x} + \mathbf{u_y} + \mathbf{u_z}]$ and $a = 3xy + 4zx$ by
+carrying out the detailed differentiations.
+
+\vspace{24pt}
+
+We will show that this equation is true by evaluating both sides separately and showing that they have the same value.
+
+\begin{equation*}
+	\begin{split}
+		\nabla \times (a\mathbf{A}) & = \nabla \times \left[
+			(3x^2y^2z + 4x^2yz^2)\mathbf{u_x} + (3x^2y^2z + 4x^2yz^2)\mathbf{u_y} + (3x^2y^2z + 4x^2yz^2)\mathbf{u_z}
+			\right] \\
+		& = \left(
+		\frac{\partial}{\partial y}(3x^2y^2z + 4x^2yz^2) - \frac{\partial}{\partial z}(3x^2y^2z + 4x^2yz^2)
+		\right)\mathbf{u_x} \\
+		& \quad + \left(
+		\frac{\partial}{\partial z}(3x^2y^2z + 4x^2yz^2) - \frac{\partial}{\partial x}(3x^2y^2z + 4x^2yz^2)
+		\right)\mathbf{u_y} \\
+		& \quad + \left(
+		\frac{\partial}{\partial x}(3x^2y^2z + 4x^2yz^2) - \frac{\partial}{\partial y}(3x^2y^2z + 4x^2yz^2)
+		\right)\mathbf{u_z} \\
+		& = (6x^2yz + 4x^2z^2 - 3x^2y^2 - 8x^2yz)\mathbf{u_x} \\
+		& \quad + (3x^2y^2 + 8x^2yz - 6xy^2z - 8xyz^2)\mathbf{u_y} \\
+		& \quad + (6xy^2z + 8xyz^2 - 6x^2yz - 4x^2z^2)\mathbf{u_z} \\
+		& = (-2x^2yz + 4x^2z^2 - 3x^2y^2)\mathbf{u_x} \\
+		& \quad + (3x^2y^2 + 8x^2yz - 6xy^2z - 8xyz^2)\mathbf{u_y} \\
+		& \quad + (6xy^2z + 8xyz^2 - 6x^2yz - 4x^2z^2)\mathbf{u_z}
+	\end{split}
+\end{equation*}
+
+\begin{equation*}
+	\begin{split}
+		(\nabla a) \times \mathbf{A} + a\nabla \times \mathbf{A} & = \left(
+		\frac{\partial a}{\partial x}\mathbf{u_x} + \frac{\partial a}{\partial y}\mathbf{u_y} + \frac{\partial a}{\partial z}\mathbf{u_z}
+		\right) \times \mathbf{A} \\
+		& \quad + a \left[
+			\left(\frac{\partial A_z}{\partial y} - \frac{\partial A_y}{\partial z}\right)\mathbf{u_x}
+			+ \left(\frac{\partial A_x}{\partial z} - \frac{\partial A_z}{\partial x}\right)\mathbf{u_y}
+			+ \left(\frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y}\right)\mathbf{u_z}
+			\right] \\
+		& = \left(\frac{\partial a}{\partial y}A_z - \frac{\partial a}{\partial z}A_y\right)\mathbf{u_x}
+		+ \left(\frac{\partial a}{\partial z}A_x - \frac{\partial a}{\partial x}A_z\right)\mathbf{u_y}
+		+ \left(\frac{\partial a}{\partial x}A_y - \frac{\partial a}{\partial y}A_x\right)\mathbf{u_z} \\
+		& \quad + a \left[
+			\left(\frac{\partial A_z}{\partial y} - \frac{\partial A_y}{\partial z}\right)\mathbf{u_x}
+			+ \left(\frac{\partial A_x}{\partial z} - \frac{\partial A_z}{\partial x}\right)\mathbf{u_y}
+			+ \left(\frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y}\right)\mathbf{u_z}
+			\right] \\
+		& = (3x \cdot xyz - 4x \cdot xyz)\mathbf{u_x} \\
+		& \quad + \left(4x \cdot xyz - (3y + 4z)xyz\right)\mathbf{u_y} \\
+		& \quad + \left((3y + 4z)xyz - 3x \cdot xyz\right)\mathbf{u_z} \\
+		& \quad + (3xy + 4zx)\left((xz - xy)\mathbf{u_x} + (xy - yz)\mathbf{u_y} + (yz - xz)\mathbf{u_z}\right) \\
+		& = (-x^2yz)\mathbf{u_x} + (4x^2yz - 3xy^2z - 4xyz^2)\mathbf{u_y} + (3xy^2z + 4xyz^2 - 3x^2yz)\mathbf{u_z} \\
+		& \quad + (3x^2yz - 3x^2y^2 + 4x^2z^2 - 4x^2yz)\mathbf{u_x} \\
+		& \quad + (3x^2y^2 - 3xy^2z + 4x^2yz - 4xyz^2)\mathbf{u_y} \\
+		& \quad + (3xy^2z - 3x^2yz + 4xyz^2 - 4x^2z^2)\mathbf{u_z} \\
+		& = (-2x^2yz - 3x^2y^2 + 4x^2z^2)\mathbf{u_x} \\
+		& \quad + (8x^2yz - 6xy^2z - 8xyz^2 + 3x^2y^2)\mathbf{u_y} \\
+		& \quad + (6xy^2z + 8xyz^2 - 6x^2yz - 4x^2z^2)\mathbf{u_z}
+	\end{split}
+\end{equation*}
+
+The two sides of the equation have the same value. Therefore, the equation is true.
+
+\end{document}

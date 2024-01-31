@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{mathrsfs}
+\begin{document}
+
+\textbf{1.4.4} Calculate the divergence of the vector $\mathbf{A} = x^3 y\sin(\pi z)\mathbf{u_x} \\ + xy\sin(\pi
+	z)\mathbf{u_y} + x^2 y^2 z^2 \mathbf{u_z}$ at the point (1,1,1).
+
+\vspace{24pt}
+
+Let $p = \begin{pmatrix} 1 & 1 & 1 \end{pmatrix}$.
+
+\begin{equation*}
+	\begin{split}
+		(\nabla \bullet \mathbf{A})\rvert_{p} & = \left(\frac{\partial A_x}{\partial x} + \frac{\partial A_y}{\partial y} + \frac{\partial A_z}{\partial z}\right)\biggr\rvert_{p} \\
+		& = \left(\frac{\partial}{\partial x}(x^3 y\sin(\pi z)) + \frac{\partial}{\partial y}(xy\sin(\pi z)) + \frac{\partial}{\partial z}(x^2 y^2 z^2)\right)\biggr\rvert_{p} \\
+		& = (3x^2 y\sin(\pi z) + x\sin(\pi z) + 2zx^2 y^2)\rvert_{p} \\
+		& = 3 \cdot 1^2 \cdot 1 \cdot \sin(\pi \cdot 1) + 1 \cdot \sin(\pi \cdot 1) + 2 \cdot 1 \cdot 1^2 \cdot 1^2 \\
+		& = 3 + 1 + 2 \\
+		& = 6
+	\end{split}
+\end{equation*}
+
+\end{document}

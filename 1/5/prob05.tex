@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{mathrsfs}
+\begin{document}
+
+\textbf{1.5.5} Repeat Problem 1.5.4 with $v(t) = 10\cos(120\pi t + 45 \degree)$.
+
+\vspace{24pt}
+
+From \textbf{1.5.4}, we know that
+
+\begin{equation*}
+	Z = 10 + j\left(12\pi - \frac{1}{0.12\pi}\right)
+\end{equation*}
+
+Now we rewrite the input signal in phasor notation, compute the current phasor, and then convert that phasor back to a
+signal in the time domain.
+
+\begin{equation*}
+	\begin{split}
+		V(\chi) & = 10e^{j\frac{\pi}{4}} \\
+		& = 10\cos{\frac{\pi}{4}} + j10\sin{\pi}{4} \\
+		& = 10\frac{\sqrt{2}}{2} + j10\frac{\sqrt{2}}{2} \\
+		& = 10\frac{\sqrt{2}}{2}(1 + j)
+	\end{split}
+\end{equation*}
+
+\begin{equation*}
+	\begin{split}
+		I(\chi) & = \frac{V(\chi)}{Z} \\
+		& = \frac{10\frac{\sqrt{2}}{2}(1 + j)}{10 + j\left(12\pi - \frac{1}{0.12\pi}\right)} \\
+		& \approx 0.240 - j0.133
+	\end{split}
+\end{equation*}
+
+\begin{equation*}
+	\begin{split}
+		i(t) & = \sqrt{{(0.240)}^2 + {(-0.133)}^2}\cos{\left(
+			120\pi t + \tan^{-1}\left(\frac{-0.133}{0.240}\right)
+			\right)} \\
+		& = 0.274\cos{(120\pi t - 0.506)} \\
+		& = 0.274\cos{(120\pi t - 29 \degree)} \text{A}
+	\end{split}
+\end{equation*}
+
+This is practically the same result as \textbf{1.5.4}, except that the signal is shifted forward by about 45\degree, as
+expected.
+
+\end{document}

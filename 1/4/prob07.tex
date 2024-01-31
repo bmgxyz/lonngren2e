@@ -1,0 +1,124 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{geometry}
+\usepackage{mathrsfs}
+\begin{document}
+
+\textbf{1.4.7} The water that flows in a channel with sides at $x = 0$ and $x = a$ has a velocity distribution
+$\mathbf{v}{(x,z)} = [{(a/2)}^2 - {(x-a/2)}^2]z^2\mathbf{u_y}$. The bottom of the river is at $z = 0$. A small paddle
+wheel with its axis parallel to the $z$ axis is inserted into the channel and is free to rotate. Find the relative rates
+of rotation at the points
+
+\begin{equation*}
+	\left(x = \frac{a}{4}, z = 1\right), \left(x = \frac{a}{2}, z = 1\right), \text{and} \left(x = \frac{3a}{4}, z = 1\right)
+\end{equation*}
+
+Will the paddle wheel rotate if its axis is parallel to the $x$ axis or the $y$ axis? \@\textit{Note: Diagram not
+	shown.}
+
+\vspace{24pt}
+
+To find the relative rates of rotation at the given points, we must evaluate the curl of $\mathbf{v}$ in the
+$\mathbf{u_z}$ direction at those points. Let $p_1$, $p_2$, and $p_3$ be the three given points.
+
+\begin{equation*}
+	\begin{split}
+		\nabla \times \mathbf{v} & = \left(\frac{\partial A_z}{\partial y} - \frac{\partial A_y}{\partial z}\right)\mathbf{u_x} + \left(\frac{\partial A_x}{\partial z} - \frac{\partial A_z}{\partial x}\right)\mathbf{u_y} + \left(\frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y}\right)\mathbf{u_z} \\
+		& = \left[
+			\frac{\partial}{\partial y}(0)
+			- \frac{\partial}{\partial z}\left(\left[{\left(\frac{a}{2}\right)}^2
+				- {\left(x - \frac{a}{2}\right)}^2\right]z^2\right)
+			\right]\mathbf{u_x} \\
+		& \quad + \left[\frac{\partial}{\partial z}(0) - \frac{\partial}{\partial x}{(0)}\right]\mathbf{u_y} \\
+		& \quad + \left[
+			\frac{\partial}{\partial x}\left(\left[{\left(\frac{a}{2}\right)}^2
+				- {\left(x - \frac{a}{2}\right)}^2\right]z^2\right)
+			- \frac{\partial}{\partial y}(0)
+			\right]\mathbf{u_z} \\
+		& = -2z \left[{\left(\frac{a}{2}\right)}^2 - {\left(x - \frac{a}{2}\right)}^2\right]\mathbf{u_x} + \left(z^2 (a - 2x)\right)\mathbf{u_z}
+	\end{split}
+\end{equation*}
+
+\begin{equation*}
+	\begin{split}
+		\left(\nabla \times \mathbf{v}\right) \rvert_{p_1} \bullet \mathbf{u_z} & = \left[
+		-2 \cdot 1 \left[
+		{\left(\frac{a}{2}\right)}^2
+		- {\left(\frac{a}{4} - \frac{a}{2}\right)}^2
+		\right] \mathbf{u_x}
+		+ \left[
+			1^2 \left(a - 2 \cdot \frac{a}{4}\right)
+			\right] \mathbf{u_z}
+		\right] \bullet \mathbf{u_z} \\
+		& = \frac{a}{2}
+	\end{split}
+\end{equation*}
+
+\begin{equation*}
+	\begin{split}
+		\left(\nabla \times \mathbf{v}\right) \rvert_{p_2} \bullet \mathbf{u_z} & = \left[
+		-2 \cdot 1 \left[
+		{\left(\frac{a}{2}\right)}^2
+		- {\left(\frac{a}{2} - \frac{a}{2}\right)}^2
+		\right] \mathbf{u_x}
+		+ \left[
+			1^2 \left(a - 2 \cdot \frac{a}{2}\right)
+			\right] \mathbf{u_z}
+		\right] \bullet \mathbf{u_z} \\
+		& = 0
+	\end{split}
+\end{equation*}
+
+\begin{equation*}
+	\begin{split}
+		\left(\nabla \times \mathbf{v}\right) \rvert_{p_3} \bullet \mathbf{u_z} & = \left[
+		-2 \cdot 1 \left[
+		{\left(\frac{a}{2}\right)}^2
+		- {\left(\frac{3a}{4} - \frac{a}{2}\right)}^2
+		\right] \mathbf{u_x}
+		+ \left[
+			1^2 \left(a - 2 \cdot \frac{3a}{4}\right)
+			\right] \mathbf{u_z}
+		\right] \bullet \mathbf{u_z} \\
+		& = -\frac{a}{2}
+	\end{split}
+\end{equation*}
+
+\newpage
+
+To determine whether or not the paddle wheel would rotate if oriented along the $x$ or $y$ axes, we must evaluate the
+curl of $\mathbf{v}$ in those directions.
+
+\begin{equation*}
+	\begin{split}
+		\left(\nabla \times \mathbf{v}\right) \bullet \mathbf{u_x} & = \left[
+		-2z \left[
+		{\left(\frac{a}{2}\right)}^2
+		- {\left(x - \frac{a}{2}\right)}^2
+		\right]\mathbf{u_x}
+		+ \left(z^2 (a - 2x)\right)\mathbf{u_z}
+		\right] \bullet \mathbf{u_x} \\
+		& = -2z \left[{\left(\frac{a}{2}\right)}^2 - {\left(x - \frac{a}{2}\right)}^2\right]
+	\end{split}
+\end{equation*}
+
+\begin{equation*}
+	\begin{split}
+		\left(\nabla \times \mathbf{v}\right) \bullet \mathbf{u_y} & = \left[
+		-2z \left[
+		{\left(\frac{a}{2}\right)}^2
+		- {\left(x - \frac{a}{2}\right)}^2
+		\right]\mathbf{u_x}
+		+ \left(z^2 (a - 2x)\right)\mathbf{u_z}
+		\right] \bullet \mathbf{u_y} \\
+		& = 0
+	\end{split}
+\end{equation*}
+
+The paddle wheel rotates when oriented parallel to the $x$ axis as long as $z \neq 0$ and $x \neq \frac{a}{2}$. It does
+not rotate when oriented parallel to the $y$ axis.
+
+\end{document}

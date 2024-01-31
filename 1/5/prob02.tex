@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{mathrsfs}
+\begin{document}
+
+\textbf{1.5.2} Given a phasor $V(\chi) = 10 + j5$, find the sinusoidal signal this represents if the frequency equals 60
+Hz.
+
+\begin{equation*}
+	\begin{split}
+		v(t) & = \text{Re}\left[V(\chi)e^{j\omega t}\right] \\
+		& = \text{Re}\left[(10 + j5)e^{j(2\pi \cdot 60 \text{Hz})}\right] \\
+		& = \text{Re}\left[(10 + j5)(\cos{120\pi t} + j\sin{120\pi t})\right] \\
+		& = \text{Re}\left[10\cos{120\pi t} + j10\sin{120\pi t} + j5\cos{120\pi t} - 5\sin{120\pi t}\right] \\
+		& = 10\cos{120\pi t} - 5\sin{120\pi t}
+	\end{split}
+\end{equation*}
+
+\end{document}

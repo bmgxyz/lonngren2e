@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{mathrsfs}
+\begin{document}
+
+\textbf{1.4.3} By direct differentiation show that
+
+\begin{equation*}
+	\begin{split}
+		\nabla \left(\frac{1}{r}\right) = -\nabla ' \left(\frac{1}{r}\right)
+	\end{split}
+\end{equation*}
+
+where $r = \sqrt{{(x-x')}^2 + {(y-y')}^2 + {(z-z')}^2}$ and $\nabla '$ denotes differentiation with respect to the
+variables $x'$, $y'$, and $z'$.
+
+\vspace{24pt}
+
+We will compute both sides of the equation and show that they are equal. For brevity, we will write $r^2 = {(x-x')}^2 +
+	{(y-y')}^2 + {(z-z')}^2$.
+
+\begin{equation*}
+	\begin{split}
+		\nabla \left(\frac{1}{r}\right) & = \frac{\partial}{\partial x}{(r^2)}^{-\frac{1}{2}}\mathbf{u_x} + \frac{\partial}{\partial y}{(r^2)}^{-\frac{1}{2}}\mathbf{u_y} + \frac{\partial}{\partial z}{(r^2)}^{-\frac{1}{2}}\mathbf{u_z} \\
+		& = -\frac{1}{2}{(r^2)}^{-\frac{3}{2}}(2x - 2x')\mathbf{u_x} \\
+		& \quad - \frac{1}{2}{(r^2)}^{-\frac{3}{2}}(2y - 2y')\mathbf{u_y} \\
+		& \quad - \frac{1}{2}{(r^2)}^{-\frac{3}{2}}(2z - 2z')\mathbf{u_z} \\
+		& = -{(r^2)}^{-\frac{3}{2}}(x - x')\mathbf{u_x} - {(r^2)}^{-\frac{3}{2}}(y - y')\mathbf{u_y} - {(r^2)}^{-\frac{3}{2}}(z - z')\mathbf{u_z} \\
+		& = -r^{-3}(x - x')\mathbf{u_x} - r^{-3}(y - y')\mathbf{u_y} - r^{-3}(z - z')\mathbf{u_z}
+	\end{split}
+\end{equation*}
+
+\begin{equation*}
+	\begin{split}
+		-\nabla ' \left(\frac{1}{r}\right) & = \frac{\partial}{\partial x'}{(r^2)}^{-\frac{1}{2}}\mathbf{u_x} + \frac{\partial}{\partial y'}{(r^2)}^{-\frac{1}{2}}\mathbf{u_y} + \frac{\partial}{\partial z'}{(r^2)}^{-\frac{1}{2}}\mathbf{u_z} \\
+		& = \frac{1}{2}{(r^2)}^{-\frac{3}{2}}(2x' - 2x)\mathbf{u_x} \\
+		& \quad + \frac{1}{2}{(r^2)}^{-\frac{3}{2}}(2y' - 2y)\mathbf{u_y} \\
+		& \quad + \frac{1}{2}{(r^2)}^{-\frac{3}{2}}(2z' - 2z)\mathbf{u_z} \\
+		& = -{(r^2)}^{-\frac{3}{2}}(x - x')\mathbf{u_x} - {(r^2)}^{-\frac{3}{2}}(y - y')\mathbf{u_y} - {(r^2)}^{-\frac{3}{2}}(z - z')\mathbf{u_z} \\
+		& = -r^{-3}(x - x')\mathbf{u_x} - r^{-3}(y - y')\mathbf{u_y} - r^{-3}(z - z')\mathbf{u_z}
+	\end{split}
+\end{equation*}
+
+Therefore, the given equation is true.
+
+\end{document}

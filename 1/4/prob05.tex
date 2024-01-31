@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{mathrsfs}
+\begin{document}
+
+\textbf{1.4.5} Show that the divergence theorem is valid for a cube located at the center of a Cartesian coordinate
+system for a vector $\mathbf{A} = x\mathbf{u_x} + 2\mathbf{u_y}$.\@ \textit{Note: Diagram not shown.}
+
+\vspace{24pt}
+
+The divergence theorem states that the integral of a vector field over a closed surface is equal to the volume integral
+of the divergence of that field over the enclosed volume. That is,
+
+\begin{equation*}
+	\oint \mathbf{A} \bullet \mathbf{ds} = \int_{\Delta \text{v}} (\nabla \bullet \mathbf{A})\text{dv}
+\end{equation*}
+
+We will compute both sides of this equation for the given vector field and surface and show that they are equal.
+
+\begin{equation*}
+	\begin{split}
+		\oint \mathbf{A} \bullet \mathbf{ds} & = \int_{x=-a}^a \int_{y=-a}^a (x\mathbf{u_x} + 2\mathbf{u_y}) \bullet (\text{dydx}(\mathbf{u_z})) \\
+		& \quad + \int_{x=-a}^a \int_{y=-a}^a (x\mathbf{u_x} + 2\mathbf{u_y}) \bullet (\text{dydx}(-\mathbf{u_z})) \\
+		& \quad + \int_{y=-a}^a \int_{z=-a}^a (x\mathbf{u_x} + 2\mathbf{u_y}) \bullet (\text{dzdy}(\mathbf{u_x})) \\
+		& \quad + \int_{y=-a}^a \int_{z=-a}^a (x\mathbf{u_x} + 2\mathbf{u_y}) \bullet (\text{dzdy}(-\mathbf{u_x})) \\
+		& \quad + \int_{x=-a}^a \int_{z=-a}^a (x\mathbf{u_x} + 2\mathbf{u_y}) \bullet (\text{dzdx}(\mathbf{u_y})) \\
+		& \quad + \int_{x=-a}^a \int_{z=-a}^a (x\mathbf{u_x} + 2\mathbf{u_y}) \bullet (\text{dzdx}(-\mathbf{u_x})) \\
+		& = \int_{y=-a}^a \int_{z=-a}^a x \text{dzdy} - \int_{y=-a}^a \int_{z=-a}^a x \text{dzdy} \\
+		& \quad + \int_{x=-a}^a \int_{z=-a}^a 2 \text{dzdx} - \int_{x=-a}^a \int_{z=-a}^a 2 \text{dzdx} \\
+		& = \int_{y=-a}^a \int_{z=-a}^a a \text{dzdy} - \int_{y=-a}^a \int_{z=-a}^a -a \text{dzdy} \\
+		& = 2a \int_{y=-a}^a \int_{z=-a}^a \text{dzdy} \\
+		& = 2a \int_{y=-a}^a z \rvert_{-a}^a \text{dy} \\
+		& = 2a \int_{y=-a}^a 2a \text{dy} \\
+		& = 4a^2 y \rvert_{-a}^a \\
+		& = 8a^3
+	\end{split}
+\end{equation*}
+
+\begin{equation*}
+	\begin{split}
+		\int_{\Delta \text{v}} (\nabla \bullet \mathbf{A})\text{dv} & = \int_{x=-a}^a \int_{y=-a}^a \int_{z=-a}^a \left(\frac{\partial A_x}{\partial x} + \frac{\partial A_y}{\partial y} + \frac{\partial A_z}{\partial z}\right) \text{dzdydx} \\
+		& = \int_{x=-a}^a \int_{y=-a}^a \int_{z=-a}^a \left(\frac{\partial}{\partial x}(x) + \frac{\partial}{\partial y}(2) + \frac{\partial}{\partial z}(0)\right) \text{dzdydx} \\
+		& = \int_{x=-a}^a \int_{y=-a}^a \int_{z=-a}^a (1 + 0 + 0) \text{dzdydx} \\
+		& = \int_{x=-a}^a \int_{y=-a}^a z \rvert_{-a}^a \text{dydx} \\
+		& = 2a \int_{x=-a}^a y \rvert_{-a}^a \text{dx} \\
+		& = 4a^2 x \rvert_{-a}^a \\
+		& = 8a^3
+	\end{split}
+\end{equation*}
+
+Both sides of the equation have the same value. Therefore, the divergence theorem is valid in this case.
+
+\end{document}

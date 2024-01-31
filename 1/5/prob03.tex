@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{mathrsfs}
+\begin{document}
+
+\textbf{1.5.3} Find the phasor notation of $v(t) = \cos{(120\pi t - 60\degree)} - \sin{(120\pi t)}$.
+
+\vspace{24pt}
+
+First, we rewrite the signal in terms of positive cosines with phase shifts.
+
+\begin{equation*}
+	v(t) = \cos{(120\pi t - \frac{\pi}{3})} + \cos{(120\pi t + \frac{\pi}{2})}
+\end{equation*}
+
+Now we can convert this signal to phasor notation.
+
+\begin{equation*}
+	\begin{split}
+		V(\chi) & = \cos{(-\frac{\pi}{3})} + j\sin{(-\frac{\pi}{3})} + \cos{(\frac{\pi}{2})} + j\sin{(\frac{\pi}{2})} \\
+		& = \frac{1}{2} - j\frac{\sqrt{3}}{2} + 0 + j \\
+		& = \frac{1}{2} + j(1 - \frac{\sqrt{3}}{2})
+	\end{split}
+\end{equation*}
+
+\end{document}

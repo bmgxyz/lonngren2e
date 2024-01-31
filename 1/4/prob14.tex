@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{geometry}
+\usepackage{mathrsfs}
+\begin{document}
+
+\textbf{1.4.14} In rectangular coordinates, verify that $\nabla \bullet (a\mathbf{A}) = \mathbf{A} \bullet \nabla a +
+	a\nabla \bullet \mathbf{A}$ where $\mathbf{A} = xyz[\mathbf{u_x} + \mathbf{u_y} + \mathbf{u_z}]$ and $a = 3xy + 4zx$ by
+carrying out the detailed differentiations.
+
+\vspace{24pt}
+
+We will show that this equation is true by evaluating both sides separately and showing that they have the same value.
+
+\begin{equation*}
+	\begin{split}
+		\nabla \bullet (a\mathbf{A}) & = \nabla \bullet (3xy + 4zx)(xyz)(\mathbf{u_x} + \mathbf{u_y} + \mathbf{u_z}) \\
+		& = \nabla \bullet (3x^2y^2z + 4x^2yz^2)(\mathbf{u_x} + \mathbf{u_y} + \mathbf{u_z}) \\
+		& = \frac{\partial}{\partial x}(3x^2y^2z + 4x^2yz^2) + \frac{\partial}{\partial y}(3x^2y^2z + 4x^2yz^2) + \frac{\partial}{\partial x}(3x^2y^2z + 4x^2yz^2) \\
+		& = 6xy^2z + 8xyz^2 + 6x^2yz + 4x^2z^2 + 3x^2y^2 + 8x^2yz \\
+		& = 6xy^2z + 8xyz^2 + 14x^2yz + 4x^2z^2 +3x^2y^2
+	\end{split}
+\end{equation*}
+
+\begin{equation*}
+	\begin{split}
+		\mathbf{A} \bullet \nabla a + a\nabla \bullet \mathbf{A} & = \mathbf{A} \bullet \left(
+		\frac{\partial a}{\partial x}\mathbf{u_x} + \frac{\partial a}{\partial y}\mathbf{u_y} + \frac{\partial a}{\partial z}\mathbf{u_z}
+		\right)
+		+ a \left(
+		\frac{\partial A_x}{\partial x} + \frac{\partial A_y}{\partial y} + \frac{\partial A_z}{\partial z}
+		\right) \\
+		& = \frac{\partial a}{\partial x}A_x + \frac{\partial a}{\partial y}A_y + \frac{\partial a}{\partial z}A_z
+		+ a \left(
+		\frac{\partial A_x}{\partial x} + \frac{\partial A_y}{\partial y} + \frac{\partial A_z}{\partial z}
+		\right) \\
+		& = \frac{\partial}{\partial x}(3xy + 4zx)(xyz) + \frac{\partial}{\partial y}(3xy + 4zx)(xyz) + \frac{\partial}{\partial z}(3xy + 4zx)(xyz) \\
+		& \quad + (3xy + 4zx) \left(
+		\frac{\partial}{\partial x}(xyz) + \frac{\partial}{\partial y}(xyz) + \frac{\partial}{\partial z}(xyz)
+		\right) \\
+		& = (3y + 4z)(xyz) + (3x)(xyz) + (4x)(xyz) + (3xy + 4zx)(yz + xz + xy) \\
+		& = 3xy^2z + 4xyz^2 + 3x^2yz + 4x^2yz + 3xy^2z \\
+		& \quad + 4xyz^2 + 3x^2yz + 4x^2z^2 + 3x^2y^2 + 4x^2yz \\
+		& = 6xy^2z + 8xyz^2 + 14x^2yz + 4x^2z^2 + 3x^2y^2
+	\end{split}
+\end{equation*}
+
+The two sides of the equation have the same value. Therefore, the equation is true.
+
+\end{document}

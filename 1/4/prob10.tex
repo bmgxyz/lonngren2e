@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{mathrsfs}
+\begin{document}
+
+\textbf{1.4.10} Show that $\nabla \times \mathbf{A} = 0$ if $\mathbf{A} = r^2 \mathbf{u_r}$ in spherical coordinates.
+
+\begin{equation*}
+	\begin{split}
+		\nabla \times \mathbf{A} & = \frac{1}{r\sin\theta} \left(\frac{\partial}{\partial \theta}(A_\phi \sin\theta) - \frac{\partial A_\theta}{\partial \phi}\right) \mathbf{u_r} \\
+		& \quad + \frac{1}{r} \left(\frac{1}{\sin\theta}\frac{\partial A_r}{\partial \phi} - \frac{\partial}{\partial r}(rA_\phi)\right) \mathbf{u_\theta} \\
+		& \quad + \frac{1}{r} \left(\frac{\partial}{\partial r}(rA_\theta) - \frac{\partial A_r}{\partial \theta}\right) \mathbf{u_\phi} \\
+		& = \frac{1}{r\sin\theta} \left(\frac{\partial}{\partial \theta}(0 \cdot \sin\theta) - \frac{\partial}{\partial \phi}(0)\right) \mathbf{u_r} \\
+		& \quad + \frac{1}{r} \left(\frac{1}{\sin\theta}\frac{\partial}{\partial \phi}(r^2) - \frac{\partial}{\partial r}(r \cdot 0)\right) \mathbf{u_\theta} \\
+		& \quad + \frac{1}{r} \left(\frac{\partial}{\partial r}(r \cdot 0) - \frac{\partial}{\partial \theta}(r^2)\right) \mathbf{u_\phi} \\
+		& = 0
+	\end{split}
+\end{equation*}
+
+\end{document}

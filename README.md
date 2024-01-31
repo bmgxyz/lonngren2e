@@ -3,12 +3,12 @@ Solutions to the problems in *Fundamentals of Electromagnetics with MATLAB*, 2nd
 or both. I have included the text of the problem with each solution file. Note that I completed the MATLAB problems with
 GNU Octave, so I'm not certain that they will work flawlessly with MATLAB.
 
-- [ ] 1 — MATLAB, Vectors, and Phasors
+- [x] 1 — MATLAB, Vectors, and Phasors
   - [x] 1.1 — Understanding Vectors Using MATLAB
   - [x] 1.2 — Coordinate Systems
   - [x] 1.3 — Integral Relations for Vectors
-  - [ ] 1.4 — Differential Relations for Vectors
-  - [ ] 1.5 — Phasors
+  - [x] 1.4 — Differential Relations for Vectors
+  - [x] 1.5 — Phasors
 - [ ] 2 — Electrostatic Fields
   - [ ] 2.1 — Coulomb's Law
   - [ ] 2.2 — Electric Field

@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{mathrsfs}
+\begin{document}
+
+\textbf{1.4.6} Show that the divergence theorem is valid for a sphere of radius $a$ located at the center of a
+coordinate system for a vector $\mathbf{A} = r\mathbf{u_r}$.
+
+\vspace{24pt}
+
+The divergence theorem states that the integral of a vector field over a closed surface is equal to the volume integral
+of the divergence of that field over the enclosed volume. That is,
+
+\begin{equation*}
+	\oint \mathbf{A} \bullet \mathbf{ds} = \int_{\Delta \text{v}} (\nabla \bullet \mathbf{A})\text{dv}
+\end{equation*}
+
+We will compute both sides of this equation for the given vector field and surface and show that they are equal.
+
+\begin{equation*}
+	\begin{split}
+		\oint \mathbf{A} \bullet \mathbf{ds} & = \int_{\theta=0}^\pi \int_{\phi=0}^{2\pi} (r\mathbf{u_r}) \bullet (r^2 \sin\theta \text{d}\phi \text{d}\theta\mathbf{u_r}) \\
+		& = \int_{\theta=0}^\pi \int_{\phi=0}^{2\pi} r^3 \sin\theta \text{d}\phi \text{d}\theta \\
+		& = \int_{\theta=0}^\pi r^3 \sin\theta \phi \rvert_{\phi=0}^{2\pi} \text{d}\theta \\
+		& = \int_{\theta=0}^\pi 2\pi r^3 \sin\theta \text{d}\theta \\
+		& = -2\pi r^3 \cos\theta \rvert_{\theta=0}^{\pi} \\
+		& = 4\pi r^3 \\
+		& = 4\pi a^3
+	\end{split}
+\end{equation*}
+
+\begin{equation*}
+	\begin{split}
+		\int_{\Delta \text{v}} (\nabla \bullet \mathbf{A})\text{dv} & = \int_{\phi=0}^{2\pi} \int_{\theta=0}^\pi \int_{r=0}^a \frac{1}{r^2} \frac{\partial(r^2 A_r)}{\partial r} r^2 \sin\theta \text{drd}\theta\text{d}\phi \\
+		& = \int_{\phi=0}^{2\pi} \int_{\theta=0}^\pi \int_{r=0}^a \frac{\partial}{\partial r}(r^3) \sin\theta \text{drd}\theta\text{d}\phi \\
+		& = \int_{\phi=0}^{2\pi} \int_{\theta=0}^\pi \int_{r=0}^a 3r^2 \sin\theta \text{drd}\theta\text{d}\phi \\
+		& = \int_{\phi=0}^{2\pi} \int_{\theta=0}^\pi r^3 \sin\theta \rvert_{r=0}^a \text{d}\theta\text{d}\phi \\
+		& = \int_{\phi=0}^{2\pi} -r^3 \cos\theta \rvert_{\theta=0}^\pi \text{d}\phi \\
+		& = \int_{\phi=0}^{2\pi} 2r^3 \text{d}\phi \\
+		& = 2r^3 \phi\rvert_{\phi=0}^{2\pi} \\
+		& = 4\pi r^3 \\
+		& = 4\pi a^3
+	\end{split}
+\end{equation*}
+
+Both sides of the equation have the same value. Therefore, the divergence theorem is valid in this case.
+
+\end{document}

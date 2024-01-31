@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{geometry}
+\usepackage{mathrsfs}
+\begin{document}
+
+\textbf{1.4.11} In rectangular coordinates, verify that $\nabla \bullet \nabla \times \mathbf{A} = 0$ where $\mathbf{A}
+	= x^2 y^2 z^2 \left[\mathbf{u_x} + \mathbf{u_y} + \mathbf{u_z}\right]$ by carrying out the detailed differentiations.
+
+\begin{equation*}
+	\begin{split}
+		\nabla \bullet \nabla \times \mathbf{A} & = \nabla \bullet \left[
+			\left(\frac{\partial A_z}{\partial y} - \frac{\partial A_y}{\partial z}\right) \mathbf{u_x}
+			+ \left(\frac{\partial A_x}{\partial z} - \frac{\partial A_z}{\partial x}\right) \mathbf{u_y}
+			+ \left(\frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y}\right) \mathbf{u_z}
+			\right] \\
+		& = \frac{\partial}{\partial x}\left(\frac{\partial A_z}{\partial y} - \frac{\partial A_y}{\partial z}\right)
+		+ \frac{\partial}{\partial y}\left(\frac{\partial A_x}{\partial z} - \frac{\partial A_z}{\partial x}\right)
+		+ \frac{\partial}{\partial z}\left(\frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y}\right) \\
+		& = \frac{\partial}{\partial x}\left(\frac{\partial}{\partial y}(x^2 y^2 z^2) - \frac{\partial}{\partial z}(x^2 y^2 z^2)\right) \\
+		& \quad + \frac{\partial}{\partial y}\left(\frac{\partial}{\partial z}(x^2 y^2 z^2) - \frac{\partial}{\partial x}(x^2 y^2 z^2)\right) \\
+		& \quad + \frac{\partial}{\partial z}\left(\frac{\partial}{\partial x}(x^2 y^2 z^2) - \frac{\partial}{\partial y}(x^2 y^2 z^2)\right) \\
+		& = \frac{\partial}{\partial x}\left(2x^2yz^2 - 2x^2y^2z\right)
+		+ \frac{\partial}{\partial y}\left(2x^2y^2z - 2 xy^2z^2\right)
+		+ \frac{\partial}{\partial z}\left(2xy^2z^2 - 2x^2yz^2\right) \\
+		& = 4xyz^2 - 4xy^2z + 4x^2yz - 4xyz^2 + 4xy^2z - 4x^2yz \\
+		& = 0
+	\end{split}
+\end{equation*}
+
+\end{document}
